@@ -1,0 +1,125 @@
+* {
+   box-sizing: border-box;
+  --primaryColour: #2c678c;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background-color: white;
+  color: var(--primaryColour);
+}
+h1, h2 {
+  font-size: 45px;
+}
+h3 {
+  font-size: 35px;
+  margin: 20px 0 0;
+}
+p {
+  font-size: 20px;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 30px;
+}
+header {
+  background-color: var(--primaryColour);
+  color: white;
+}
+.header__grid {
+  display: grid;
+  grid-template-columns: 1fr 30px;
+}
+.header__logo {
+  width: 200px;
+}
+
+.header__menu {
+  width: 30px;
+  height: 25px;
+}
+.header__menu--line {
+  border-top: 2px solid white;
+  width: 30px;
+  height: 2px;
+  display: block;
+}
+.header__menu--line + .header__menu--line {
+  margin-top: 7px;
+}
+.header__title {
+  padding: 90px 0 0;
+  display: grid;
+  justify-items: end;
+}
+h1 {
+  margin: 0;
+  text-align: right;
+  max-width: 860px;
+}
+h2 {
+  max-width: 800px;
+}
+
+/* This is a cool way to add shapes without having to load an additional image asset. */
+.clip__container {  
+  height: 200px;
+}
+.clip__shape {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 40%);
+  clip-path: polygon(0 0, 100% 0%, 100% 75%, 0 40%);
+  background-color: var(--primaryColour);
+  height: 100%;
+}
+
+
+.columns {
+  margin: 60px 0;
+}
+@media screen and (min-width: 765px) {
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+  }
+}
+
+.columns .col {
+  display: grid;
+  grid-template-rows: 175px min-content 1fr min-content;
+}
+@media screen and (max-width: 764px) {
+  .columns .col + .col {
+    margin-top : 60px;
+  }
+}
+.col__desc {
+ margin-bottom: 30px; 
+}
+
+.columns .col img {
+  width: 100%;
+}
+.columns .col p {
+  margin: 10px 0;
+}
+.btn-container {
+  align-self: end;
+}
+.btn {
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: var(--primaryColour);
+  color: white;
+  border: 0;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: #3486b9;
+  border: 0;
+}
